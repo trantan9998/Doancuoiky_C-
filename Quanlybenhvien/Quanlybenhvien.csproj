@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A110CD6E-1E33-4D82-90CD-6E7C94C9C4F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Quanlybenhvien</RootNamespace>
+    <AssemblyName>Quanlybenhvien</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bacsi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bacsi.Designer.cs">
+      <DependentUpon>bacsi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangnhap.Designer.cs">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doimatkhau.Designer.cs">
+      <DependentUpon>doimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formdangky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formdangky.Designer.cs">
+      <DependentUpon>formdangky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hồ sơ bệnh nhân.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hồ sơ bệnh nhân.Designer.cs">
+      <DependentUpon>Hồ sơ bệnh nhân.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hồ sơ Bệnh án.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hồ sơ Bệnh án.Designer.cs">
+      <DependentUpon>Hồ sơ Bệnh án.cs</DependentUpon>
+    </Compile>
+    <Compile Include="khoangoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khoangoai.Designer.cs">
+      <DependentUpon>khoangoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="khoanoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khoanoi.Designer.cs">
+      <DependentUpon>khoanoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nhanvien.Designer.cs">
+      <DependentUpon>nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phongkhambenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phongkhambenh.Designer.cs">
+      <DependentUpon>phongkhambenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phongkhamxetnghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phongkhamxetnghiem.Designer.cs">
+      <DependentUpon>phongkhamxetnghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="bacsi.resx">
+      <DependentUpon>bacsi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dangnhap.resx">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doimatkhau.resx">
+      <DependentUpon>doimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formdangky.resx">
+      <DependentUpon>formdangky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hồ sơ bệnh nhân.resx">
+      <DependentUpon>Hồ sơ bệnh nhân.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hồ sơ Bệnh án.resx">
+      <DependentUpon>Hồ sơ Bệnh án.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khoangoai.resx">
+      <DependentUpon>khoangoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khoanoi.resx">
+      <DependentUpon>khoanoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhanvien.resx">
+      <DependentUpon>nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phongkhambenh.resx">
+      <DependentUpon>phongkhambenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phongkhamxetnghiem.resx">
+      <DependentUpon>phongkhamxetnghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App1.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marijuana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5211c8bd_4369f54e_hinh-nen-dep-nhat-cho-may-tinh027.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PKDKHH-1-NNHArchitects.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PKDKHH-1-NNHArchitects1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dasd.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PKDKHH-1-NNHArchitects2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PKDKHH-1-NNHArchitects3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PKDKHH-1-NNHArchitects4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PKDKHH-1-NNHArchitects5.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
