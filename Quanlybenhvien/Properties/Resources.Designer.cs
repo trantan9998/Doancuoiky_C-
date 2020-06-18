@@ -63,6 +63,26 @@ namespace Quanlybenhvien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _13796818751 {
+            get {
+                object obj = ResourceManager.GetObject("13796818751", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _16f5_dat_kham_benh_qua_internet {
+            get {
+                object obj = ResourceManager.GetObject("16f5-dat-kham-benh-qua-internet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5211c8bd_4369f54e_hinh_nen_dep_nhat_cho_may_tinh027 {
             get {
                 object obj = ResourceManager.GetObject("5211c8bd_4369f54e_hinh-nen-dep-nhat-cho-may-tinh027", resourceCulture);
@@ -83,9 +103,39 @@ namespace Quanlybenhvien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asWIg8 {
+            get {
+                object obj = ResourceManager.GetObject("asWIg8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bacgroup2 {
+            get {
+                object obj = ResourceManager.GetObject("bacgroup2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bed {
             get {
                 object obj = ResourceManager.GetObject("bed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap canvas {
+            get {
+                object obj = ResourceManager.GetObject("canvas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +193,36 @@ namespace Quanlybenhvien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fsdf {
+            get {
+                object obj = ResourceManager.GetObject("fsdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giphy {
+            get {
+                object obj = ResourceManager.GetObject("giphy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_thien_nhien_dep_cho_may_tinh_062600980 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-thien-nhien-dep-cho-may-tinh_062600980", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotel {
             get {
                 object obj = ResourceManager.GetObject("hotel", resourceCulture);
@@ -153,9 +233,79 @@ namespace Quanlybenhvien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconn {
+            get {
+                object obj = ResourceManager.GetObject("iconn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconn1 {
+            get {
+                object obj = ResourceManager.GetObject("iconn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KTC_header_bg {
+            get {
+                object obj = ResourceManager.GetObject("KTC-header-bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marijuana {
             get {
                 object obj = ResourceManager.GetObject("marijuana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notepad_13 {
+            get {
+                object obj = ResourceManager.GetObject("notepad-13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo_1445452916036_9022dfd33aa8 {
+            get {
+                object obj = ResourceManager.GetObject("photo-1445452916036-9022dfd33aa8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phuong_phap_tu_hoc_cho_developer_770x300 {
+            get {
+                object obj = ResourceManager.GetObject("phuong-phap-tu-hoc-cho-developer-770x300", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +366,26 @@ namespace Quanlybenhvien.Properties {
         internal static System.Drawing.Bitmap PKDKHH_1_NNHArchitects5 {
             get {
                 object obj = ResourceManager.GetObject("PKDKHH-1-NNHArchitects5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_cartoon_pretty_doctor_character_image_1168721 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-cartoon-pretty-doctor-character-image_1168721", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_cash_register_icon_outline_style_png_image_1811272 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-cash-register-icon-outline-style-png-image_1811272", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

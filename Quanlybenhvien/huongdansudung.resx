@@ -117,4 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>CHỨC NĂNG :(BUTTON)
+    + THÊM: Ở đây bạn có thể thêm mới một nhân viên dưới quyền Admin
+    + SỬA: Bạn có thể chỉnh sửa thông tin nhân viên 
+    + XÓA: Dưới quyền của Admin bạn có thể xóa nhân viên khỏi hệ thống
+
+</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>CHỨC NĂNG :(BUTTON)
+    + THÊM: Dưới quyền quản lý của nhân viên Bạn có thể thêm mới Bệnh nhân khám bệnh
+    + SỬA: Bạn có thể chỉnh sửa thông tin Hồ sơ của bệnh nhân khi người khám bệnh yêu cầu sửa
+    + XÓA: Dưới quyền của Nhân viên bạn có thể hủy bỏ hồ sơ của bệnh nhân khỏi hệ thống
+    + LỌC: Bạn có thể lọc ra bệnh nhân thông qua (CMND) 
+    + LÀM MỚI: Bạn có thể viết lại thông tin của bệnh nhân kế tiếp</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>CHỨC NĂNG :(BUTTON)
+    + THÊM: Dưới quyền quản lý của nhân viên Bạn có thể đăng ký khám bệnh cho bệnh nhân với bác sỹ phụ trách cho bệnh nhân đó
+    + SỬA: Bạn có thể chỉnh sửa thông tin đăng ký khám bệnh cho bệnh nhân
+    + XÓA: Dưới quyền của Nhân viên bạn có thể hủy bỏ đăng ký khám bệnh cho bệnh nhân (nếu sự yêu cầu này của bệnh nhân yêu cầu đến nhân viên
+ </value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>CHỨC NĂNG :(BUTTON)
+    + THÊM: dưới quyền của y tá phụ trách ghi chép lại sau khi bác sỹ khám bệnh ghi lại thông tin bệnh lý của bệnh nhân
+    + SỬA: nếu như có sự sai sót về bệnh lý thì y tá có quyền chỉnh sửa lại
+    + XÓA: Nếu như hồ sơ đăng ký sai sót thông tin thì y tá sẽ hủy khám bệnh cho bệnh nhân
+    + LỌC: y tá sẽ lọc ra thông tin bệnh nhân 
+    + LÀM MỚI: trong quá trình sai xót thì y tá sẽ viết lại bằng cách (làm mới) để ghi chép lại</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>CHỨC NĂNG :(BUTTON)
+    + THÊM: dưới quyền của y tá phụ trách ghi chép lại sau khi bác sỹ khám bệnh ghi lại thông tin bệnh lý của bệnh nhân
+    + SỬA: nếu như có sự sai sót về bệnh lý thì y tá có quyền chỉnh sửa lại
+    + XÓA: Nếu như hồ sơ đăng ký sai sót thông tin thì y tá sẽ hủy khám bệnh cho bệnh nhân
+    + LỌC: y tá sẽ lọc ra thông tin bệnh nhân 
+    + LÀM MỚI: trong quá trình sai xót thì y tá sẽ viết lại bằng cách (làm mới) để ghi chép lại</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>CHỨC NĂNG :(BUTTON)
+    + CẬP NHẬP LẠI DỮ LIỆU: nhân viên sẽ cập nhập lại thông tin của tất cả bệnh nhân 
+    + XUẤT FILE : sau khi kiểm tra lại thông tin của bệnh nhân thì phần này nhân viên sẽ export file (excel) nhằm thống kê lại danh sách bệnh nhân
+</value>
+  </data>
 </root>

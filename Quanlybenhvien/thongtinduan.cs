@@ -10,27 +10,17 @@ using System.Windows.Forms;
 
 namespace Quanlybenhvien
 {
-    public partial class doimatkhau : Form
+    public partial class thongtinduan : Form
     {
-        public doimatkhau()
+        public thongtinduan()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtnhaplaimatkhau_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-   
-
-        private void btndangnhap_Click(object sender, EventArgs e)
-        {
-
+            huongdansudung hdsd = new huongdansudung();
+            hdsd.ShowDialog();
         }
     }
 }

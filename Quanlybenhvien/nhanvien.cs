@@ -17,20 +17,45 @@ namespace Quanlybenhvien
         {
             InitializeComponent();
         }
+        string chuoiketnoi = @"Data Source=VANTAN\TRANTAN;Initial Catalog=QLHOSO_BENHVIEN;Integrated Security=True";
         SqlConnection conn = null;
-        SqlConnection connect = new SqlConnection(@" Data source =TRANTAN\SQLEXPRESS;Initial Catalog=QLBENHVIEN;Integrated Security=true");
-        string chuoiketnoi = @"Data source =TRANTAN\SQLEXPRESS;Initial Catalog=QLBENHVIEN;Integrated Security=true";
 
-        private void hienthi()
+        public void load()
         {
-
-            string sqlselect = "select *from NHANVIEN";
-            SqlCommand cmd = new SqlCommand(sqlselect, conn);
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            datanhanvien.DataSource = dt;
+            SqlConnection conn = new SqlConnection(chuoiketnoi);
+            try
+            {
+                conn.Open();
+                string sql = "select * from nhanvien";
+                SqlDataAdapter dt = new SqlDataAdapter(sql, conn);
+                DataTable tb = new DataTable();
+                dt.Fill(tb);
+                datanhanvien.DataSource = tb;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("lỗi kết nối: " + ex.Message);
+            }
         }
+        /*
+        public bool kiemtranhanvien(int manhanvien)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.Open();
+            string sql = "select id_nhanvien from nhanvien where id_nhanvien='" + manhanvien + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read() == true)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
+        */
+      
         private void datahosobenhnhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -43,16 +68,7 @@ namespace Quanlybenhvien
 
         private void button5_Click(object sender, EventArgs e)
         {
-            connect.Open();
-
-            string sql = "select NHANVIEN.maso,hovaten,gioitinh,diachi,ngaysinh,noisinh,cmnd,sodt,nghenghiep,email from NHANVIEN";
-            SqlCommand cmd = new SqlCommand(sql, connect);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            datanhanvien.DataSource = dt;
-            connect.Close();
+            load();
         }
 
         private void bttLƯU_Click(object sender, EventArgs e)
@@ -60,18 +76,16 @@ namespace Quanlybenhvien
             SqlConnection conn = new SqlConnection(chuoiketnoi);
             try
             {
-                if (txtmasoBN.Text != "" && txthovaten.Text != "" && cmbgioitinh.Text != "" && txtdiachi.Text != "" && datetimeNS.Text != "" && txtnoisinh.Text != "" && txtcmnd.Text != "" && txtsodt.Text != "" && txtnghenghiep.Text != "" && txtemail.Text != "")
+                if (txtmanhanvien.Text != "" && txthovatennv.Text != "" && cbgioitinhnv.Text != "" && txtdiachinv.Text != "" && txtnamsinh.Text != "" && txtnoisinhnv.Text != "" && txtcmndnv.Text != "" && txtsdtnv.Text != "" && txttrinhdohocvannv.Text != "" && txtemailnv.Text != "" && txttentaikhoan.Text != "" && txtmatkhau.Text != "")
                 {
-
                     conn.Open();
-                    string sql = "insert into hang value ('" + txtmasoBN.Text + "','" + txthovaten.Text + "','" + cmbgioitinh + "','" + txtdiachi.Text + "','" + datetimeNS.Text + "','" + txtnoisinh.Text + "','" + txtcmnd.Text + "','" + txtsodt.Text + "','" + txtnghenghiep.Text + "','" + txtemail.Text + "')";
+                    string sql = "insert into nhanvien values ('" + txtmanhanvien.Text + "','" + txthovatennv.Text + "','" + cbgioitinhnv.Text + "','" + txtdiachinv.Text + "','" + txtnamsinh.Text + "','" + txtnoisinhnv.Text + "','" + txtcmndnv.Text + "','" + txtsdtnv.Text + "','" + txttrinhdohocvannv.Text + "','" + txtemailnv.Text + "','" + txttentaikhoan.Text + "','" + txtmatkhau.Text + "')";
                     SqlCommand cmd = new SqlCommand(sql, conn);
-                    int kq = (int)cmd.ExecuteNonQuery();
+                    int kq =cmd.ExecuteNonQuery();
                     if (kq > 0)
                     {
-
                         MessageBox.Show("thêm thành công!");
-
+                        load();
                     }
 
                     else
@@ -79,6 +93,8 @@ namespace Quanlybenhvien
                         MessageBox.Show("thêm thất bại!");
                     conn.Close();
                 }
+
+
                 else
                     MessageBox.Show("chưa nhập đủ thông tin");
 
@@ -89,6 +105,7 @@ namespace Quanlybenhvien
             }
 
         }
+
 
         private void bttthoat_Click(object sender, EventArgs e)
         {
@@ -102,7 +119,19 @@ namespace Quanlybenhvien
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DialogResult thongbao;
+            thongbao = MessageBox.Show("bạn có muốn xóa không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (thongbao == DialogResult.OK)
+            {
+                SqlConnection conn = new SqlConnection(chuoiketnoi);
+                conn.Open();
+                string sql = "delete from nhanvien where id_nhanvien='" +txtmanhanvien.Text +"'";
+                SqlCommand cmd = new SqlCommand(sql,conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("xóa thành công");
+                load();
+                conn.Close();
+            }
         }
 
         private void label18_Click(object sender, EventArgs e)
@@ -119,6 +148,127 @@ namespace Quanlybenhvien
         {
 
         }
+
+        private void nhanvien_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLHOSO_BENHVIENDataSet.nhanvien' table. You can move, or remove it, as needed.
+
+
+        }
+
+        private void datanhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            txtmanhanvien.Clear();
+            txthovatennv.Clear();
+            txtdiachinv.Clear();
+            txtnoisinhnv.Clear();
+            txtcmndnv.Clear();
+            txtsdtnv.Clear();
+          
+            txtnamsinh.Clear();
+            txttrinhdohocvannv.Clear();
+            txtemailnv.Clear();
+            txttentaikhoan.Clear();
+            txtmatkhau.Clear();
+
+        }
+
+        private void txtdiachinv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void nhanvienBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datanhanvien_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(chuoiketnoi);
+            try
+            {
+                conn.Open();
+                string sql = "update nhanvien set hovaten=N'"+txthovatennv.Text+"'," +
+                    "gioitinh=N'"+cbgioitinhnv.Text+"'," +
+                    "diachi=N'"+txtdiachinv.Text+"'," +
+                    "namsinh=N'"+txtnamsinh.Text+"'," +
+                    "noisinh=N'"+txtnoisinhnv.Text+"'," +
+                    "cmnd=N'"+txtcmndnv.Text+"'," +
+                    "sdt=N'"+txtsdtnv.Text+"'," +
+                    "trinhdohocvan=N'"+txttrinhdohocvannv.Text+"'," +
+                    "email=N'"+txtemailnv.Text+"'," +
+                    "tentaikhoan=N'"+txttentaikhoan.Text+"'," +
+                    "matkhau=N'"+txtmatkhau.Text+"' where id_nhanvien='" + txtmanhanvien.Text + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                int kq = (int)cmd.ExecuteNonQuery();
+                if (kq > 0)
+                {
+
+                    MessageBox.Show("đã chỉnh sửa!");
+                    load();
+                }
+
+                else
+
+                    MessageBox.Show("sửa thất bại!");
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("lỗi kết nối:" + ex.Message);
+            }
+        }
+
+        private void datanhanvien_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            txtmanhanvien.Text = datanhanvien.CurrentRow.Cells[0].Value.ToString();
+            txthovatennv.Text = datanhanvien.CurrentRow.Cells[1].Value.ToString();
+            cbgioitinhnv.Text = datanhanvien.CurrentRow.Cells[2].Value.ToString();
+            txtdiachinv.Text = datanhanvien.CurrentRow.Cells[3].Value.ToString();
+            txtnamsinh.Text = datanhanvien.CurrentRow.Cells[4].Value.ToString();
+            txtnoisinhnv.Text = datanhanvien.CurrentRow.Cells[5].Value.ToString();
+            txtcmndnv.Text = datanhanvien.CurrentRow.Cells[6].Value.ToString();
+            txtsdtnv.Text = datanhanvien.CurrentRow.Cells[7].Value.ToString();
+            txttrinhdohocvannv.Text = datanhanvien.CurrentRow.Cells[8].Value.ToString();
+            txtemailnv.Text = datanhanvien.CurrentRow.Cells[9].Value.ToString();
+            txttentaikhoan.Text = datanhanvien.CurrentRow.Cells[10].Value.ToString();
+            txtmatkhau.Text = datanhanvien.CurrentRow.Cells[11].Value.ToString();
+            
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    
 }

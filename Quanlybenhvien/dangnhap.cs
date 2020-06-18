@@ -16,40 +16,30 @@ namespace Quanlybenhvien
         {
             InitializeComponent();
         }
-       
-       
+
+
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-         
+           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
-            SqlConnection conn =new SqlConnection(@"Data source =TRANTAN\SQLEXPRESS;Initial Catalog=QLBENHVIEN;Integrated Security=true");
-            try
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=VANTAN\TRANTAN;Initial Catalog=QLHOSO_BENHVIEN;Integrated Security=True"); // making connection   
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM nhanvien WHERE tentaikhoan='" + txttaikhoan.Text + "' AND matkhau='" + txtmatkhau.Text + "'", con);
+            /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
+            DataTable dt = new DataTable(); //this is creating a virtual table  
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
             {
-                conn.Open();
-                string taikhoan = txttaikhoan.Text;
-                string matkhau = txtpassword.Text;
-                string sql = "select * from DANGNHAP where taikhoan = '" + taikhoan + "' and matkhau= '" + matkhau + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dta= cmd.ExecuteReader();
-                if(dta.Read()==true)
-                {
-                    MessageBox.Show("Đăng nhập thành công");
-                  
-                }
-                else
-                {
-                    MessageBox.Show("đăng nhập thất bại");
-                }
+                /* I have made a new page called home page. If the user is successfully authenticated then the form will be moved to the next form */
+                this.Hide();
+                new Form1().Show();
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("không kết được đến hệ thống!");
-            }
-
-            conn.Close();
+            else
+                MessageBox.Show("VUI LÒNG KIỂM TRA LẠI TÀI KHOẢN VÀ MẬT KHẨU");
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
@@ -64,9 +54,7 @@ namespace Quanlybenhvien
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formdangky frm1 = new formdangky();
-            frm1.MdiParent = this;
-            frm1.Show();
+           
         }
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -77,11 +65,15 @@ namespace Quanlybenhvien
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formdangky t = new formdangky();
-            t.ShowDialog();
+          
         }
 
         private void dangnhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

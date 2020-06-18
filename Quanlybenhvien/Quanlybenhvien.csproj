@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,7 +46,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Users\TRANTAN\Downloads\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -70,11 +95,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formdangky.cs">
+    <Compile Include="huongdansudung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formdangky.Designer.cs">
-      <DependentUpon>formdangky.cs</DependentUpon>
+    <Compile Include="huongdansudung.Designer.cs">
+      <DependentUpon>huongdansudung.cs</DependentUpon>
     </Compile>
     <Compile Include="Hồ sơ bệnh nhân.cs">
       <SubType>Form</SubType>
@@ -112,14 +137,20 @@
     <Compile Include="phongkhambenh.Designer.cs">
       <DependentUpon>phongkhambenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="phongkhamxetnghiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="phongkhamxetnghiem.Designer.cs">
-      <DependentUpon>phongkhamxetnghiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="thongtinduan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thongtinduan.Designer.cs">
+      <DependentUpon>thongtinduan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xetnghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xetnghiem.Designer.cs">
+      <DependentUpon>Xetnghiem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="bacsi.resx">
       <DependentUpon>bacsi.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,8 +163,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formdangky.resx">
-      <DependentUpon>formdangky.cs</DependentUpon>
+    <EmbeddedResource Include="huongdansudung.resx">
+      <DependentUpon>huongdansudung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hồ sơ bệnh nhân.resx">
       <DependentUpon>Hồ sơ bệnh nhân.cs</DependentUpon>
@@ -153,9 +184,6 @@
     <EmbeddedResource Include="phongkhambenh.resx">
       <DependentUpon>phongkhambenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="phongkhamxetnghiem.resx">
-      <DependentUpon>phongkhamxetnghiem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,6 +194,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="thongtinduan.resx">
+      <DependentUpon>thongtinduan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xetnghiem.resx">
+      <DependentUpon>Xetnghiem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App1.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,6 +273,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PKDKHH-1-NNHArchitects5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-cartoon-pretty-doctor-character-image_1168721.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13796818751.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacgroup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-thien-nhien-dep-cho-may-tinh_062600980.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1445452916036-9022dfd33aa8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-cash-register-icon-outline-style-png-image_1811272.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asWIg8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phuong-phap-tu-hoc-cho-developer-770x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KTC-header-bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canvas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fsdf.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16f5-dat-kham-benh-qua-internet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
